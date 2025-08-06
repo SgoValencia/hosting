@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OnceBet - Contacto</title>
+    <link rel="icon" type="image/png" href="Imagenes/logo-title.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 3px solid #2ecc71;
+        }
+
+        .logo {
+            color: #2ecc71;
+            font-size: 26px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #2ecc71;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            background-color: #2ecc71;
+            color: #000;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        }
+
+        h2, h3 {
+            color: #2ecc71;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info, .social-links {
+            font-size: 16px;
+            color: #fff;
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #2ecc71;
+            text-decoration: underline;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            color: #fff;
+            text-decoration: none;
+            padding-left: 10px;
+        }
+
+        .social-links a:hover {
+            color: #2ecc71;
+        }
+        
+        .social-links a img {
+            margin-right: 10px;
+        }
+
+        .legal {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #ccc;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+    <script>
+        function irA(url) {
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo" onclick="irA('bienvenida.html')">OnceBet</div>
+        <div class="nav-links">
+            <a onclick="irA('promociones.html')">Promociones</a>
+            <a onclick="irA('contacto.html')">Contacto</a>
+            <a onclick="irA('inicio.html')">Iniciar Sesión</a>
+            <a onclick="irA('registro.html')">Regístrate</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Contáctanos</h2>
+        <div class="contact-info">
+            <p><strong>Teléfono servicio al cliente:</strong> +57 300 337 9003</p>
+            <p>
+                <strong>WhatsApp:</strong> 
+                <a href="https://wa.me/573024011157" target="_blank">+57 302 401 1157</a>
+            </p>
+            <p>
+                <strong>Email:</strong> 
+                <a href="https://gmail.com" target="_blank">soporte@oncebet.com</a>
+            </p>
+        </div>
+
+        <h3>Síguenos en redes sociales</h3>
+        <div class="social-links">
+<a href="https://www.instagram.com/once.bet/" target="_blank">
+    <img src="Imagenes/instagram.png" alt="Logo de Instagram" width="20" height="20">
+    @oncebet
+</a>
+<a href="https://x.com/once_bet" target="_blank">
+    <img src="Imagenes/X.png" alt="Logo de X" width="20" height="20">
+    @oncebet_col
+</a>
+        </div>
+
+        <div class="legal">
+            <p>OnceBet es una plataforma legal de apuestas, autorizada por entidades reguladoras nacionales.</p>
+            <p>Juega con responsabilidad. Prohibido para menores de edad.</p>
+        </div>
+    </div>
+    <footer>
+        © 2025 OnceBet | Todos los derechos reservados | Juega con responsabilidad
+    </footer>
+</body>
+</html>
+

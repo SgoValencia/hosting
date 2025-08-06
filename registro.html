@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OnceBet - Registro</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #1f4037, #99f2c8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .register-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .register-box {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .register-box h2 {
+      margin-bottom: 10px;
+      color: #2ecc71;
+    }
+
+    .register-box p {
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    .register-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      background-color: #f1f1f1;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .btn {
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #27ae60;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #ccc;
+      margin-top: 15px;
+    }
+
+    .note a {
+      color: #2ecc71;
+      text-decoration: none;
+    }
+
+    .note a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-container">
+    <div class="register-box">
+      <h2>Crear cuenta</h2>
+      <p>Completa los datos para registrarte en OnceBet</p>
+      <form onsubmit="return registrar(event)">
+        <input type="text" id="nuevoUsuario" placeholder="Nombre de usuario" required>
+        <input type="email" id="correo" placeholder="Correo electrónico" required>
+        <input type="password" id="nuevaClave" placeholder="Contraseña" required>
+        <input type="password" id="confirmarClave" placeholder="Confirmar contraseña" required>
+        <button class="btn" type="submit">Registrarse</button>
+      </form>
+      <div class="note">
+        ¿Ya tienes cuenta? <a href="inicio.html">Inicia sesión</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function registrar(e) {
+      e.preventDefault();
+      const usuario = document.getElementById("nuevoUsuario").value;
+      const correo = document.getElementById("correo").value;
+      const clave = document.getElementById("nuevaClave").value;
+      const confirmar = document.getElementById("confirmarClave").value;
+
+      if (clave !== confirmar) {
+        alert("Las contraseñas no coinciden.");
+        return false;
+      }
+
+      if (usuario && correo && clave) {
+        alert("¡Registro exitoso! Ahora puedes iniciar sesión.");
+        window.location.href = "inicio.html";
+      } else {
+        alert("Por favor completa todos los campos.");
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+

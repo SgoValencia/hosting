@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>OnceBet - Promociones</title>
+    <link rel="icon" type="image/png" href="Imagenes/logo-title.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            color: #fff;
+        }
+        nav {
+            background-color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 3px solid #2ecc71;
+        }
+        .logo {
+            color: #2ecc71;
+            font-size: 26px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #2ecc71;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+        .nav-links a:hover {
+            background-color: #2ecc71;
+            color: #000;
+        }
+        .titulo-promociones {
+            text-align: center;
+            font-size: 28px;
+            margin: 30px 0 10px 0;
+            color: #000000;
+            font-weight: bold;
+        }
+        .promo-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+            gap: 20px;
+        }
+        .promo-card {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        .promo-card img {
+            max-width: 100%;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        .promo-card h3 {
+            color: #2ecc71;
+        }
+        .promo-card p {
+            font-size: 14px;
+            color: #ccc;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+    <script>
+        function irA(url) {
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo" onclick="irA('bienvenida.html')">OnceBet</div>
+        <div class="nav-links">
+            <a onclick="irA('promociones.html')">Promociones</a>
+            <a onclick="irA('contacto.html')">Contacto</a>
+            <a onclick="irA('inicio.html')">Iniciar Sesión</a>
+            <a onclick="irA('registro.html')">Regístrate</a>
+        </div>
+    </nav>
+    <div class="titulo-promociones">Promociones OnceBet</div>
+    <div class="promo-container">
+        <div class="promo-card">
+            <img src="Imagenes/recarga-doble.png" alt="Recarga doble">
+            <h3>¡Recarga doble!</h3>
+            <p>Recibe el doble de saldo en tu primera recarga del mes. ¡Aprovecha hoy!</p>
+        </div>
+        <div class="promo-card">
+            <img src="Imagenes/cashback.png">
+            <h3>Cashback semanal</h3>
+            <p>Te devolvemos el 10% de tus pérdidas todos los lunes. Sin condiciones ocultas.</p>
+        </div>
+        <div class="promo-card">
+            <img src="Imagenes/referidos.png" alt="Referidos">
+            <h3>Invita a un amigo</h3>
+            <p>Por cada amigo que se registre y apueste, ganas bonos de hasta $50.000 COP.</p>
+        </div>
+    </div>
+    <footer>
+        © 2025 OnceBet - Todas las promociones están sujetas a términos y condiciones. Apuesta con responsabilidad.
+    </footer>
+</body>
+</html>
