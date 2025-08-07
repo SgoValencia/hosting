@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnceBet - Bienvenida</title>
+    <link rel="icon" type="image/png" href="Imagenes/logo-title.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            color: #fff;
+        }
+
+        nav {
+            background-color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 3px solid #2ecc71;
+        }
+
+        .logo {
+            color: #2ecc71;
+            font-size: 26px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #2ecc71;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            background-color: #2ecc71;
+            color: #000;
+        }
+
+        .welcome-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .hero-section {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5em;
+            color: #2ecc71;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .featured-match {
+            background: rgba(46, 204, 113, 0.2);
+            border: 2px solid #2ecc71;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .featured-match h3 {
+            font-size: 1.8em;
+            color: #2ecc71;
+            margin-bottom: 10px;
+        }
+
+        .featured-match p {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 10px 0;
+            color: white;
+        }
+
+        .featured-match .btn {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .featured-match .btn:hover {
+            background-color: #27ae60;
+        }
+
+        .features-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .feature-card {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            min-height: 200px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+            border-radius: 10px;
+        }
+
+        .feature-card h3,
+        .feature-card p {
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-card h3 {
+            color: #2ecc71;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 0.95em;
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #ccc;
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+        function irA(url) {
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+
+    <nav>
+        <div class="logo" onclick="irA('index.html')">OnceBet</div>
+        <div class="nav-links">
+            <a onclick="irA('promociones.html')">Promociones</a>
+            <a onclick="irA('contacto.html')">Contacto</a>
+            <a onclick="irA('inicio.html')">Iniciar Sesión</a>
+            <a onclick="irA('registro.html')">Regístrate</a>
+        </div>
+    </nav>
+
+    <div class="welcome-container">
+        <section class="hero-section">
+            <h1>Bienvenido a OnceBet</h1>
+            <p>Tu destino número uno para las mejores experiencias de apuestas en línea. ¡Disfruta de cuotas competitivas, una amplia variedad de eventos deportivos y promociones increíbles!</p>
+            <div class="featured-match">
+                <h3>Partido Destacado del Día</h3>
+                <p>Real Madrid vs Barcelona</p>
+                <a href="inicio.html" class="btn">¡Apuesta ahora!</a>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="feature-card" style="background-image: url('Imagenes/amplia-seleccion-de-deportes.png');">
+                <h3>Amplia Selección de Deportes</h3>
+                <p>Apuesta en tus deportes favoritos, desde fútbol y baloncesto hasta tenis y más.</p>
+            </div>
+            <div class="feature-card" style="background-image: url('Imagenes/cuotas-competitivas.png');">
+                <h3>Cuotas Competitivas</h3>
+                <p>Ofrecemos algunas de las mejores cuotas del mercado para maximizar tus ganancias.</p>
+            </div>
+            <div class="feature-card" style="background-image: url('Imagenes/interfaz-intuitiva.png');">
+                <h3>Interfaz Intuitiva</h3>
+                <p>Nuestra plataforma es fácil de usar, tanto para principiantes como para apostadores experimentados.</p>
+            </div>
+            <div class="feature-card" style="background-image: url('Imagenes/confianza.png');">
+                <h3>Seguridad y Confianza</h3>
+                <p>Tu seguridad es nuestra prioridad. Utilizamos tecnología de encriptación avanzada para proteger tus datos.</p>
+            </div>
+            <div class="feature-card" style="background-image: url('Imagenes/promocion.png');">
+                <h3>Promociones Exclusivas</h3>
+                <p>Benefíciate de bonos de bienvenida, recargas dobles y otras ofertas especiales.</p>
+            </div>
+            <div class="feature-card" style="background-image: url('Imagenes/servicio-cliente.png');">
+                <h3>Soporte al Cliente 24/7</h3>
+                <p>Nuestro equipo de soporte está disponible para ayudarte en cualquier momento.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        © 2025 OnceBet | Todos los derechos reservados | Juega con responsabilidad
+    </footer>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDD4GD9AwV4kz11m2CJ-4pgxAHnC1VlX2M",
+    authDomain: "oncebet-21716.firebaseapp.com",
+    projectId: "oncebet-21716",
+    storageBucket: "oncebet-21716.firebasestorage.app",
+    messagingSenderId: "459149405609",
+    appId: "1:459149405609:web:da963b0f6f4715de36a8b8"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+</body>
+</html>

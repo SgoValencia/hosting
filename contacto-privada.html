@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OnceBet - Contacto</title>
+    <link rel="icon" type="image/png" href="Imagenes/logo-title.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 3px solid #2ecc71;
+        }
+
+        .nav-links a, .nav-links button {
+            color: #2ecc71;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+        }
+        
+        .nav-links a:hover, .nav-links button:hover {
+            background-color: #2ecc71;
+            color: #000;
+        }
+
+        .nav-links .user-icon svg {
+            fill: #2ecc71;
+            width: 24px;
+            height: 24px;
+        }
+        
+        .nav-links #cerrarSesionBtn {
+            background-color: red;
+            color: white;
+            border: none;
+        }
+
+        .nav-links #cerrarSesionBtn:hover {
+            background-color: darkred;
+        }
+        
+        .logo {
+            color: #2ecc71;
+            font-size: 26px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        }
+
+        h2, h3 {
+            color: #2ecc71;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info, .social-links {
+            font-size: 16px;
+            color: #fff;
+            text-align: left;
+            line-height: 1.8;
+        }
+        
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #2ecc71;
+            text-decoration: underline;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            color: #fff;
+            text-decoration: none;
+            padding-left: 10px;
+        }
+
+        .social-links a:hover {
+            color: #2ecc71;
+        }
+        
+        .social-links a img {
+            margin-right: 10px;
+        }
+
+        .legal {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #ccc;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+    <script>
+        function irA(url) {
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo" onclick="irA('principal.html')">OnceBet</div>
+        <div class="nav-links">
+            <a href="usuario.html" class="user-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 2c3.084 0 5.617 2.067 6.388 4.896-.7.534-1.282 1.157-1.745 1.879-.693.992-1.206 2.096-1.528 3.325.864.208 1.636.564 2.302 1.056.892 1.144 1.483 2.502 1.761 4.025-1.564 2.164-3.953 3.619-6.678 3.829-2.724-.21-5.113-1.665-6.678-3.829.278-1.523.869-2.881 1.761-4.025.666-.492 1.438-.848 2.302-1.056-.322-1.229-.835-2.333-1.528-3.325-.463-.722-1.045-1.345-1.745-1.879.771-2.829 3.304-4.896 6.388-4.896zM4.966 6.136c-2.846 1.967-3.996 5.867-2.756 8.956.893-1.127 1.482-2.483 1.76-4.008.666-.492 1.438-.848 2.302-1.056.864-.208 1.74-.275 2.668-.208-1.684-2.829-4.11-4.784-6.384-3.684z"/></svg>
+            </a>
+            <a onclick="irA('mis-apuestas.html')">Mis Apuestas</a>
+            <a onclick="irA('promociones-privada.html')">Promociones</a>
+            <a onclick="irA('contacto-privada.html')">Contacto</a>
+            <button id="cerrarSesionBtn">Cerrar Sesión</button>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Contáctanos</h2>
+        <div class="contact-info">
+            <p><strong>Teléfono servicio al cliente:</strong> +57 300 337 9003</p>
+            <p>
+                <strong>WhatsApp:</strong> 
+                <a href="https://wa.me/573024011157" target="_blank">+57 302 401 1157</a>
+            </p>
+            <p>
+                <strong>Email:</strong> 
+                <a href="https://gmail.com" target="_blank">soporte@oncebet.com</a>
+            </p>
+        </div>
+
+        <h3>Síguenos en redes sociales</h3>
+        <div class="social-links">
+            <a href="#" target="_blank">
+                <img src="Imagenes/instagram.png" alt="Logo de Instagram" width="20" height="20">
+                @oncebet
+            </a>
+            <a href="#" target="_blank">
+                <img src="Imagenes/x.png" alt="Logo de X" width="20" height="20">
+                @oncebet_col
+            </a>
+        </div>
+
+        <div class="legal">
+            <p>OnceBet es una plataforma legal de apuestas, autorizada por entidades reguladoras nacionales.</p>
+            <p>Juega con responsabilidad. Prohibido para menores de edad.</p>
+        </div>
+    </div>
+    <footer>
+        © 2025 OnceBet | Todos los derechos reservados | Juega con responsabilidad
+    </footer>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDD4GD9AwV4kz11m2CJ-4pgxAHnC1VlX2M",
+            authDomain: "oncebet-21716.firebaseapp.com",
+            projectId: "oncebet-21716",
+            storageBucket: "oncebet-21716.firebasestorage.app",
+            messagingSenderId: "459149405609",
+            appId: "1:459149405609:web:da963b0f6f4715de36a8b8"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script>
+        // Lógica para redirigir si no hay sesión
+        firebase.auth().onAuthStateChanged(user => {
+            if (!user) {
+                window.location.href = 'inicio.html';
+            }
+        });
+
+        // Lógica del botón de cerrar sesión
+        document.getElementById('cerrarSesionBtn').addEventListener('click', () => {
+            firebase.auth().signOut().then(() => {
+                window.location.href = 'inicio.html';
+            }).catch((error) => {
+                console.error("Error al cerrar sesión:", error);
+                alert("Hubo un error al cerrar la sesión.");
+            });
+        });
+    </script>
+</body>
+</html>
