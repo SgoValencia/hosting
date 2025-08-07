@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnceBet - Mi Perfil</title>
+    <link rel="icon" type="image/png" href="Imagenes/logo-title.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 3px solid #2ecc71;
+        }
+
+        .logo {
+            color: #2ecc71;
+            font-size: 26px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a, .nav-links button {
+            color: #2ecc71;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+        }
+
+        .nav-links a:hover, .nav-links button:hover {
+            background-color: #2ecc71;
+            color: #000;
+        }
+        
+        .nav-links #cerrarSesionBtn {
+            background-color: red;
+            color: white;
+        }
+
+        .nav-links #cerrarSesionBtn:hover {
+            background-color: darkred;
+        }
+        
+        .nav-links .user-icon svg {
+            fill: #2ecc71;
+            width: 24px;
+            height: 24px;
+        }
+        
+        .profile-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.85);
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+
+        .profile-header {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .profile-image-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 15px;
+        }
+
+        .profile-image-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #2ecc71;
+            object-fit: cover;
+        }
+
+        .upload-icon {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background-color: #2ecc71;
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            line-height: 1;
+        }
+        
+        .upload-icon:hover {
+            background-color: #27ae60;
+        }
+
+        .profile-header h1 {
+            color: #2ecc71;
+            font-size: 2.5em;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        .profile-header p {
+            font-size: 1.2em;
+            color: #ccc;
+            margin: 0;
+        }
+        
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .info-card {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #2ecc71;
+        }
+        
+        .info-card h3 {
+            color: #2ecc71;
+            margin-top: 0;
+        }
+        
+        .info-card p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+
+        .btn-actions-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .btn-action {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-action:hover {
+            background-color: #27ae60;
+        }
+        
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #ccc;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo" onclick="irA('principal.html')">OnceBet</div>
+        <div class="nav-links">
+            <a href="usuario.html" class="user-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 2c3.084 0 5.617 2.067 6.388 4.896-.7.534-1.282 1.157-1.745 1.879-.693.992-1.206 2.096-1.528 3.325.864.208 1.636.564 2.302 1.056.892 1.144 1.483 2.502 1.761 4.025-1.564 2.164-3.953 3.619-6.678 3.829-2.724-.21-5.113-1.665-6.678-3.829.278-1.523.869-2.881 1.761-4.025.666-.492 1.438-.848 2.302-1.056-.322-1.229-.835-2.333-1.528-3.325-.463-.722-1.045-1.345-1.745-1.879.771-2.829 3.304-4.896 6.388-4.896zM4.966 6.136c-2.846 1.967-3.996 5.867-2.756 8.956.893-1.127 1.482-2.483 1.76-4.008.666-.492 1.438-.848 2.302-1.056.864-.208 1.74-.275 2.668-.208-1.684-2.829-4.11-4.784-6.384-3.684z"/></svg>
+            </a>
+            <a onclick="irA('mis-apuestas.html')">Mis Apuestas</a>
+            <a onclick="irA('promociones-privada.html')">Promociones</a>
+            <a onclick="irA('contacto-privada.html')">Contacto</a>
+            <button id="cerrarSesionBtn">Cerrar Sesión</button>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-image-container">
+                <img id="profile-image" src="Imagenes/perfil.png" alt="">
+                <label for="file-upload" class="upload-icon">+</label>
+                <input type="file" id="file-upload" style="display: none;">
+            </div>
+            <h1 id="user-name">Cargando...</h1>
+            <p id="user-email">Cargando...</p>
+        </div>
+        <div class="profile-info">
+            <div class="info-card">
+                <h3>Saldo actual</h3>
+                <p id="user-balance">Cargando...</p>
+            </div>
+        </div>
+        <div class="btn-actions-container">
+            <a href="recargar.html" class="btn-action">Recargar Cuenta</a>
+            <a href="principal.html" class="btn-action">Realizar Apuesta</a>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 OnceBet | Todos los derechos reservados | Juega con responsabilidad
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDD4GD9AwV4kz11m2CJ-4pgxAHnC1VlX2M",
+            authDomain: "oncebet-21716.firebaseapp.com",
+            projectId: "oncebet-21716",
+            storageBucket: "oncebet-21716.firebasestorage.app",
+            messagingSenderId: "459149405609",
+            appId: "1:459149405609:web:da963b0f6f4715de36a8b8"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    
+    <script>
+        function irA(url) {
+            window.location.href = url;
+        }
+
+        function formatNumber(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        firebase.auth().onAuthStateChanged(async (user) => {
+            if (user) {
+                const db = firebase.firestore();
+                const userRef = db.collection("usuarios").doc(user.uid);
+                const profileImage = document.getElementById('profile-image');
+                const fileInput = document.getElementById('file-upload');
+                
+                try {
+                    const doc = await userRef.get();
+                    if (doc.exists) {
+                        const userData = doc.data();
+                        document.getElementById('user-name').textContent = userData.nombre || 'Nombre no disponible';
+                        document.getElementById('user-email').textContent = user.email;
+                        document.getElementById('user-balance').textContent = `$${formatNumber(userData.balance)}`;
+                        
+                        if (userData.photoURL) {
+                            profileImage.src = userData.photoURL;
+                        }
+                    } else {
+                        console.log("No se encontró el documento del usuario en Firestore.");
+                        document.getElementById('user-name').textContent = 'Usuario no encontrado';
+                        document.getElementById('user-email').textContent = user.email;
+                        document.getElementById('user-balance').textContent = '$0';
+                    }
+                } catch (error) {
+                    console.error("Error al obtener los datos del usuario:", error);
+                    alert("Error al cargar los datos del perfil. Por favor, inténtalo de nuevo.");
+                }
+
+                fileInput.addEventListener('change', async (e) => {
+                    const file = e.target.files[0];
+                    if (!file) {
+                        return;
+                    }
+
+                    const storageRef = firebase.storage().ref(`profile_pictures/${user.uid}/profile.jpg`);
+                    
+                    try {
+                        const uploadTask = storageRef.put(file);
+                        
+                        uploadTask.on('state_changed', 
+                            (snapshot) => {
+                                // Puedes usar esto para mostrar una barra de progreso
+                            }, 
+                            (error) => {
+                                console.error("Error al subir la imagen:", error);
+                                alert("Hubo un error al subir la imagen.");
+                            }, 
+                            async () => {
+                                const photoURL = await storageRef.getDownloadURL();
+                                
+                                await userRef.update({ photoURL: photoURL });
+
+                                alert('¡Foto de perfil actualizada con éxito!');
+                                window.location.reload();
+                            }
+                        );
+
+                    } catch (error) {
+                        console.error("Error general al subir la foto:", error);
+                        alert("Ocurrió un error inesperado al subir la foto.");
+                    }
+                });
+
+            } else {
+                window.location.href = 'inicio.html';
+            }
+        });
+
+        document.getElementById('cerrarSesionBtn').addEventListener('click', () => {
+            firebase.auth().signOut().then(() => {
+                window.location.href = 'inicio.html';
+            }).catch((error) => {
+                console.error("Error al cerrar sesión:", error);
+                alert("Hubo un error al cerrar la sesión.");
+            });
+        });
+    </script>
+</body>
+</html>
